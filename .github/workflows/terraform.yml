@@ -29,14 +29,14 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: ./infra
+        working-directory: ./infra/env/prod
         run: terraform init
 
       - name: Terraform Plan
-        working-directory: ./infra
+        working-directory: ./infra/env/prod
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: ./infra
+        working-directory: ./infra/env/prod
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
