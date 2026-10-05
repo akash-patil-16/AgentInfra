@@ -8,11 +8,16 @@ tar xzf ~/Downloads/vsts-agent-linux-x64-5.280.0.tar.gz
 
 ~/myagent$ ./run.sh
 
-Enter server URL > https://dev.azure.com/<organization>
+Enter server URL > https://dev.azure.com/akashpatil302ap0334
 Enter authentication type > PAT
-Enter personal access token > <YOUR_PAT>
-Enter agent pool > <POOL_NAME>
-Enter agent name > <AGENT_NAME>
+Enter personal access token > GEFHXYfFZQN9EtBPQRidZaCwtspDPCKo5JDl35lNNXLuIxCG3aEuJQQJ99CJACAAAAA7mUWvAAASAZDO1whn
+Enter agent pool > apatil-pool
+Enter agent name > apatil
+
+cd ~/myagent
+sudo ./svc.sh install
+sudo ./svc.sh start
+sudo ./svc.sh status
 
 
 sudo apt-get update && sudo apt-get install -y gnupg curl software-properties-common && curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list >/dev/null && sudo apt-get update && sudo apt-get install -y terraform && curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash && curl -sSfL https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash && terraform --version && tflint --version && tfsec --version
