@@ -1,13 +1,18 @@
-cd ~/Downloads
-wget https://vstsagentpackage.azureedge.net/agent/5.280.0/vsts-agent-linux-x64-5.280.0.tar.gz
+mkdir -p ~/Downloads && cd ~/Downloads && curl -fL https://download.agent.dev.azure.com/agent/5.280.0/vsts-agent-linux-x64-5.280.0.tar.gz -o vsts-agent-linux-x64-5.280.0.tar.gz
 
-
-~/$ mkdir myagent && cd myagent
-~/myagent$ tar zxvf ~/Downloads/vsts-agent-linux-x64-5.280.0.tar.gz'
+mkdir -p ~/myagent && cd ~/myagent
+tar xzf ~/Downloads/vsts-agent-linux-x64-5.280.0.tar.gz
+./config.sh
 
 ~/myagent$ ./config.sh
 
 ~/myagent$ ./run.sh
+
+Enter server URL > https://dev.azure.com/<organization>
+Enter authentication type > PAT
+Enter personal access token > <YOUR_PAT>
+Enter agent pool > <POOL_NAME>
+Enter agent name > <AGENT_NAME>
 
 
 sudo apt-get update && sudo apt-get install -y gnupg curl software-properties-common && curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list >/dev/null && sudo apt-get update && sudo apt-get install -y terraform && curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash && curl -sSfL https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install_linux.sh | bash && terraform --version && tflint --version && tfsec --version
