@@ -5,6 +5,15 @@ variable "resource_group" {
   }))
 }
 
+variable "storage_account" {
+  type = map(object({
+    name                     = string
+    resource_group_key       = string
+    account_tier             = string
+    account_replication_type = string
+  }))
+}
+
 variable "Vnet" {
   type = map(object({
     name               = string

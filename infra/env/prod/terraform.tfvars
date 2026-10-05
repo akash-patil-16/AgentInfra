@@ -5,6 +5,15 @@ resource_group = {
   }
 }
 
+storage_account = {
+  sa1 = {
+    name                     = "aptfstorageaccountjuly"
+    resource_group_key       = "rg1"
+    account_tier             = "Standard"
+    account_replication_type = "LRS"
+  }
+}
+
 Vnet = {
   vnet1 = {
     name               = "agent-apatil"
