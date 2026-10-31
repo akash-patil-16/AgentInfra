@@ -1,3 +1,5 @@
+OIDC url : repo:akash-patil-16@216741034/AgentInfra@1404001833:ref:refs/heads/main
+
 mkdir -p ~/Downloads && cd ~/Downloads && curl -fL https://download.agent.dev.azure.com/agent/5.280.0/vsts-agent-linux-x64-5.280.0.tar.gz -o vsts-agent-linux-x64-5.280.0.tar.gz
 
 mkdir -p ~/myagent && cd ~/myagent
