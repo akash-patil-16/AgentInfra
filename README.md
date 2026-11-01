@@ -10,9 +10,9 @@ tar xzf ~/Downloads/vsts-agent-linux-x64-5.280.0.tar.gz
 
 ~/myagent$ ./run.sh
 
-Enter server URL > https://dev.azure.com/akashpatil302ap0334
+Enter server URL > https://dev.azure.com/aakashpatil302ap0789
 Enter authentication type > PAT
-Enter personal access token > CKCCXcPy3XxZNzJpimHLcN0LHSIS1yoTrrCWjuAHugZPFmpRouDfJQQJ99CJACAAAAA7mUWvAAASAZDO2Zex
+Enter personal access token > 1FH1uBT41RwRlO4BYCt8ucKfA3VX9HyBWOc4fYAbHUwR7NnZT1fNJQQJ99CKACAAAAAnWSw0AAASAZDO2yLx
 Enter agent pool > apatil-pool
 Enter agent name > apatil
 
